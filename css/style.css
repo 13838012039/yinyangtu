@@ -1,0 +1,123 @@
+.content {
+    padding: 1px;
+}
+
+.yin-yang {
+    width: 96px;
+    height: 48px;
+    background: red;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: absolute;
+    animation-duration: 6s;
+    animation-name: spin2;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.one {
+    left: 0;
+    top: 0;
+}
+
+.two {
+    right: 0;
+    top: 0;
+}
+
+.three {
+    bottom: 0;
+    left: 0;
+}
+
+.four {
+    bottom: 0;
+    right: 0;
+}
+
+.yin-yang::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: red;
+    border: 18px solid #ccc;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+
+.yin-yang::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: #ccc;
+    border: 18px solid red;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+
+.yinyang {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 51%, rgba(0, 0, 0, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 100%;
+    position: relative;
+    animation-duration: 6s;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-top: 100px;
+}
+
+.yinyang::before {
+    content: '';
+    background: white;
+    border: 80px solid black;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    height: 40px;
+    width: 40px;
+}
+
+.yinyang::after {
+    content: '';
+    background: black;
+    border: 80px solid white;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    height: 40px;
+    width: 40px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+body {
+    background: burlywood;
+}
